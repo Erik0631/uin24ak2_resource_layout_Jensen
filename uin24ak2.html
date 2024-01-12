@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="uin24ak2.css">
+    <title>Arbeidskrav 2 Jensen</title>
+</head>
+<body>
+
+    <header>
+        <h1 id="category"></h1>
+    </header>
+    
+
+    <div id="resources-container"></div>
+
+
+
+    <script src="ressurser.js"></script>
+
+    
+
+    <script>
+
+        // Henter innhold fra JS//
+        document.getElementById("category").innerText = resources[0].category
+
+        // Opprett en container for ressursinformasjon
+        const resourcesContainer = document.getElementById("resources-container");
+
+        // Loop gjennom hver ressurs og opprett en boks for hver
+        resources.forEach((resource, index) => {
+            const resourceBox = document.createElement("div");
+            resourceBox.className = "resource-box"; // Legg til klasse for stil
+            resourceBox.innerHTML = `<h2>${resource.category}</h2>`;
+            resourcesContainer.appendChild(resourceBox);
+
+            // Legg til et klikkevent på boksen
+            resourceBox.addEventListener("click", () => {
+                // Vis informasjonen for den valgte ressurs
+                showResourceInfo(index);
+            });
+        });
+
+        // Funksjon for å vise informasjonen for en spesifikk ressurs
+        function showResourceInfo(index) {
+            const selectedResource = resources[index];
+            const infoContainer = document.createElement("div");
+            infoContainer.innerHTML = `
+                <h2>${selectedResource.category}</h2>
+                <p>${selectedResource.text}</p>
+                <p><strong>${selectedResource.sources[0].title}:</strong> <a href="${selectedResource.sources[0].url}" target="_blank">${selectedResource.sources[0].url}</a></p>
+            `
+
+            // Fjern all eksisterende informasjon før du viser ny informasjon
+            while (resourcesContainer.lastChild) {
+                resourcesContainer.removeChild(resourcesContainer.lastChild);
+            }
+
+            // Legg til den valgte ressursens informasjon
+            resourcesContainer.appendChild(infoContainer);
+        }
+        
+    </script>
+    
+</body>
+</html>
