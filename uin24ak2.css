@@ -1,47 +1,64 @@
+:root {
+    
+}
+
 body {
-    margin:0;
+    margin:340px;
     justify-content: center;
     align-items: center;
     background-color: #E1E5EE;
+
+   
 }
 
 
 #resources-container {
     display: flex;
-    background-color: #2A324B;
+    background-color: #E1E5EE;
     color: #fff;
     font-size: 16px;
     list-style-type: none;
     margin: 0;
     padding: 0;
     margin-right: 20px;
-    text-decoration: none;
+    justify-content: center;
+    
+   
 }
 
 .resource-box {
+    display: flex;
     cursor: pointer;
     background-color: #2A324B;
     color: #fff;
     font-size: 16px;
     list-style-type: none;
-    padding: 10px;
-    margin-right: 20px;
+    padding: 30px;
+    margin: 10px;
     text-decoration: none;
+    
 }
 
 .resource-box.active {
     background-color: #fff;
     color: #2A324B;
+    
 }
 
 #info-container {
     display: grid;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    
+    
 }
 
 .resource-info {
     background-color: #fff;
     color: #2A324B;
     padding: 10px;
+    
+    
+    
 }
