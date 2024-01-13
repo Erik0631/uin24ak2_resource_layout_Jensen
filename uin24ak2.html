@@ -8,55 +8,66 @@
 </head>
 <body>
 
-    <header>
-        <h1 id="category"></h1>
-    </header>
-    
+   
 
     <div id="resources-container"></div>
 
-
+    <div id="info-container"></div> 
 
     <script src="ressurser.js"></script>
 
-    
-
     <script>
 
-        // Henter innhold fra JS//
-        document.getElementById("category").innerText = resources[0].category
+    // Hent referanser til HTML-elementene
+const resourcesContainer = document.getElementById("resources-container");
+const infoContainer = document.getElementById("info-container");
 
-        
-    // Opprett en container for ressursinformasjon
-    const resourcesContainer = document.getElementById("resources-container")
+// Funksjon for å opprette en ressursboks
+function createResourceBox(resource, index) {
+    const resourceBox = document.createElement("div");
+    resourceBox.className = "resource-box";
+    resourceBox.innerHTML = `<h2>${resource.category}</h2>`;
+    resourcesContainer.appendChild(resourceBox);
 
-// Legg til bokser for hver ressurs
-resources.forEach((resource, index) => {
-    const resourceBox = document.createElement("div")
-    resourceBox.className = "resource-box"
-    resourceBox.innerHTML = `<h2>${resource.category}</h2>`
-    resourcesContainer.appendChild(resourceBox)
-
-    // Legg til et klikkevent
-    resourceBox.addEventListener("click", () => showResourceInfo(index))
-});
+    // Legg til klikk-lytter for å vise informasjon
+    resourceBox.addEventListener("click", () => showResourceInfo(index, resourceBox));
+}
 
 // Funksjon for å vise informasjonen for en ressurs
-function showResourceInfo(index) {
-    const selectedResource = resources[index]
-    const infoContainer = document.createElement("div")
-    infoContainer.innerHTML = `
+function showResourceInfo(index, clickedBox) {
+    // Fjern aktiv klasse fra alle bokser
+    document.querySelectorAll('.resource-box').forEach(box => box.classList.remove('active'));
+    
+    // Legg til aktiv klasse på den klikkede boksen
+    clickedBox.classList.add('active');
+
+    // Hent informasjon om den valgte ressursen
+    const selectedResource = resources[index];
+
+    // Opprett en ny informasjonsboks
+    const infoBox = document.createElement("div");
+    infoBox.className = "resource-info";
+    infoBox.innerHTML = `
         <h2>${selectedResource.category}</h2>
-        <p>${selectedResource.text}</p>
-        <p><strong>${selectedResource.sources[0].title}:</strong> <a href="${selectedResource.sources[0].url}" target="_blank">${selectedResource.sources[0].url}</a></p>
-    `
+        <div class="info-content">
+            <p>${selectedResource.text}</p>
+            <ul>
+                ${selectedResource.sources.map(source => `<li><strong>${source.title}:</strong> <a href="${source.url}" target="_blank">${source.url}</a></li>`).join('')}
+            </ul>
+        </div>
+    `;
 
     // Fjern all eksisterende informasjon før du viser ny informasjon
-    resourcesContainer.innerHTML = ''
-    
+    infoContainer.innerHTML = '';
+
     // Legg til den valgte ressursens informasjon
-    resourcesContainer.appendChild(infoContainer)
+    infoContainer.appendChild(infoBox);
 }
+
+// Opprett ressursbokser for hver ressurs
+resources.forEach((resource, index) => createResourceBox(resource, index));
+
+
     </script>
     
 </body>
