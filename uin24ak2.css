@@ -1,66 +1,68 @@
-
 body {
-       
-display: flex;
-flex-direction: column;
-justify-content: center;
-min-height: 100vh;
-background-color: #E1E5EE;
-align-items: center;
-font-family: 'Montserrat', sans-serif;
-font-size: 19px;
-max-width: 100%;
-       
- }
-
- #info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #E1E5EE;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 19px;
     max-width: 100%;
-    margin-left: -7px;
-    width: 103.9rem;
-    
+}
 
-    
- }
+#info-container {
+    max-width: 100%;
+    margin-left: -4px;
+    width: 85.3rem;
+    margin: -0.1rem;
+}
 
 #resources-container {
-display: flex;
-background-color: #E1E5EE;
-color: #fff;
-list-style-type: none;
-margin: 0;
-padding: 0;
-max-width: 100%;
+    display: flex;
+    background-color: #E1E5EE;
+    color: #fff;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
 }
 
 .resource-box {
     display: flex;
-    box-sizing: content-box;
-flex-direction: column; 
-align-items: center;
-cursor: pointer;
-background-color: #2A324B;
-color: #fff;
-font-size: 16px;
-list-style-type: none;
-padding: 12px;
-margin: 8px;
-text-decoration: none;
-width: 300px;
-font-size: 14px;
+    box-sizing: border-box;
+    flex-direction: column; 
+    align-items: center;
+    cursor: pointer;
+    background-color: #2A324B;
+    color: #fff;
+    font-size: 16px;
+    list-style-type: none;
+    padding: 12px;
+    margin: 8px;
+    text-decoration: none;
+    width: 300px;
+    font-size: 14px;
+}
 
+
+.resource-box:nth-child(odd) {
+    width: 13rem;
 }
 
 .resource-box.active {
-background-color: #fff;
-color: #2A324B;
+    background-color: #fff;
+    color: #2A324B;
+}
+
+
+.resource-box.active:nth-child(odd) {    
+    width: 13rem;
 }
 
 .resource-info {
-background-color: #fff;
-color: #2A324B;
-padding: 88px;
-margin: -7.5px;
-max-width: 100%;
-
-
+    background-color: #fff;
+    color: #2A324B;
+    padding: 88px;
+    margin: -7.5px;
+    max-width: 100%;
 }
