@@ -6,6 +6,14 @@ function createResourceBox(resource, index) {
   const resourceBox = document.createElement("div");
   resourceBox.className = "resource-box";
   resourceBox.innerHTML = `<h2>${resource.category}</h2>`;
+  
+  // Tilpass bredden basert på kategorien
+  if (resource.category === "HTML") {
+    resourceBox.classList.add("html-box"); // Legg til klasse for HTML-boksen
+  } else if (resource.category === "Sanity and headless CMS") {
+    resourceBox.classList.add("sanity-box"); // Legg til klasse for Sanity and headless CMS-boksen
+  }
+
   resourcesContainer.appendChild(resourceBox);
 
   // Legg til klikk-lytter for å vise informasjon

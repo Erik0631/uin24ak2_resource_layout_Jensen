@@ -40,23 +40,27 @@ body {
     padding: 12px;
     margin: 8px;
     text-decoration: none;
-    width: 300px;
     font-size: 14px;
+    width: 16rem;
 }
-
 
 .resource-box:nth-child(odd) {
     width: 13rem;
 }
 
+
+.html-box {
+    width: 235px; 
+}
+ 
+
+.sanity-box {
+    width: 406px; 
+}
+
 .resource-box.active {
     background-color: #fff;
     color: #2A324B;
-}
-
-
-.resource-box.active:nth-child(odd) {    
-    width: 13rem;
 }
 
 .resource-info {
