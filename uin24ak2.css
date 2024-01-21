@@ -6,14 +6,14 @@ body {
     background-color: #E1E5EE;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
-    font-size: 19px;
+    font-size: 20px;
     max-width: 100%;
 }
 
 #info-container {
     max-width: 100%;
     margin-left: -4px;
-    width: 85.3rem;
+    width: 87rem;
     margin: -0.1rem;
 }
 
@@ -41,24 +41,25 @@ body {
     padding: 12px;
     margin: 8px;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 15px;
     width: 16rem;
 }
 
 .resource-box:nth-child(odd) {
-    width: 13rem;
+    width: 14rem;
 }
 
-
+/* for å endre størelsen på container*/
 .html-box {
     width: 235px; 
 }
  
 
 .sanity-box {
-    width: 406px; 
+    width: 404px; 
 }
 
+/* Når man trykker på rususs boksen*/
 .resource-box.active {
     background-color: #fff;
     color: #2A324B;
@@ -67,7 +68,9 @@ body {
 .resource-info {
     background-color: #fff;
     color: #2A324B;
-    padding: 88px;
+    padding: 90px;
     margin: -7.5px;
     max-width: 100%;
+    height: 19rem;
+   
 }
