@@ -13,7 +13,7 @@ body {
 #info-container {
     max-width: 100%;
     margin-left: -4px;
-    width: 87rem;
+    width: 91.01rem;
     margin: -0.1rem;
 }
 
@@ -42,7 +42,7 @@ body {
     margin: 8px;
     text-decoration: none;
     font-size: 15px;
-    width: 16rem;
+    width: 19rem;
 }
 
 .resource-box:nth-child(odd) {
@@ -56,7 +56,7 @@ body {
  
 
 .sanity-box {
-    width: 404px; 
+    width: 421px; 
 }
 
 /* Når man trykker på rususs boksen*/

@@ -23,7 +23,7 @@ function createResourceBox(resource, index) {
   resourcesContainer.appendChild(resourceBox)
 
   //klikk-lytter for å vise informasjon//
-  resourceBox.addEventListener("click", () => showResourceInfo(index, resourceBox));
+  resourceBox.addEventListener("click", () => showResourceInfo(index, resourceBox))
 }
 
 // Funksjon for å vise informasjonen for en boks//
