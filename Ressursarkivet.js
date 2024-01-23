@@ -41,7 +41,7 @@ function showResourceInfo(index, clickedBox) {
   //henter info siden// 
   const infoBox = document.createElement("div")
   infoBox.className = "resource-info"
-  //Henter koden fra ressurser.js//
+  //Henter koden fra ressurser.js og setter opp struktur//
   infoBox.innerHTML = `
     <h2>${selectedResource.category}</h2>
     <div class="info-content">
