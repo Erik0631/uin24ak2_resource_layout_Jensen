@@ -12,9 +12,10 @@ resources.forEach((resource, index) => createResourceBox(resource, index))
 function createResourceBox(resource, index) {
   const resourceBox = document.createElement("div")
   resourceBox.className = "resource-box"
+  //henter category//
   resourceBox.innerHTML = `<h2>${resource.category}</h2>`
   
-  // Tilpasse bredden basert på kategorien//
+  //Tilpasse bredden basert på kategorien//
   if (resource.category === "HTML") {
     resourceBox.classList.add("html-box") //HTML-boksen//
   } else if (resource.category === "Sanity and headless CMS") {
@@ -29,32 +30,33 @@ function createResourceBox(resource, index) {
 
 //Funksjon for å vise informasjonen//
 function showResourceInfo(index, clickedBox) {
-  //Fjerner aktiv klasse fra alle bokser//
+  //Nullstiller aktiv boksen//
   document.querySelectorAll('.resource-box').forEach(box => box.classList.remove('active'))
-  
-  //klikkede boksen//
-  clickedBox.classList.add('active')
 
+  //Aktiv boks//
+  clickedBox.classList.add('active')
+  
   const selectedResource = resources[index]
 
-  //Oppretter en ny informasjonsboks//  //https://www.javascripttutorial.net/javascript-dom/javascript-createelement///
+  //henter info siden// 
   const infoBox = document.createElement("div")
   infoBox.className = "resource-info"
-  //Henter koden//
+  //Henter koden fra ressurser.js//
   infoBox.innerHTML = `
     <h2>${selectedResource.category}</h2>
     <div class="info-content">
-        <p>${selectedResource.text}</p> 
+        <p>${selectedResource.text}</p>  
         <ul>
             ${selectedResource.sources.map(source => `<li><a href="${source.url}" target="_blank">${source.title}</a></li>`).join('')} 
         </ul>
     </div>
   `
 
- //fjerner forgje nboks//
+ //fjerner forgje boks//
   infoContainer.innerHTML = ''
 
   //legger til den valgte boksen//
-  infoContainer.appendChild(infoBox)  //https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild//
+  infoContainer.appendChild(infoBox)  
+
 }
 
