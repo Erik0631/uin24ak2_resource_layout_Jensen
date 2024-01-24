@@ -36,7 +36,6 @@ function showResourceInfo(index, clickedBox) {
   
   const selectedResource = resources[index]
 
-  
   //Henter koden fra ressurser.js og setter opp struktur for nettsiden//
   const infoBox = document.createElement("div")
   infoBox.className = "resource-info"
@@ -49,7 +48,6 @@ function showResourceInfo(index, clickedBox) {
         </ul>
     </div>
   `
-
  //fjerner forgje boks så det ikke dobler seg //
   infoContainer.innerHTML = ''
 
