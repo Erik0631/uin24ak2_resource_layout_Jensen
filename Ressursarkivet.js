@@ -15,12 +15,6 @@ function createResourceBox(resource, index) {
   //henter category//
   resourceBox.innerHTML = `<h2>${resource.category}</h2>`
   
-  //Tilpasse bredden basert på kategorien//
-  if (resource.category === "HTML") {
-    resourceBox.classList.add("html-box") //HTML-boksen//
-  } else if (resource.category === "Sanity and headless CMS") {
-    resourceBox.classList.add("sanity-box") //Sanity and headless CMS-boksen//
-  }
 
   resourcesContainer.appendChild(resourceBox)
 

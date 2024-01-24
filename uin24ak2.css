@@ -5,15 +5,17 @@ body {
     min-height: 100vh;
     background-color: #E1E5EE;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;  /*valgt Font*/
-    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 19px;
     max-width: 100%;
 }
+
+
 
 #info-container {
     max-width: 100%;
     margin-left: -4px;
-    width: 91.01rem;
+    width: 92.1rem;
     margin: -0.1rem;
 }
 
@@ -41,25 +43,16 @@ body {
     padding: 12px;
     margin: 8px;
     text-decoration: none;
-    font-size: 15px;
-    width: 19rem;
+    font-size: 14px;
+    width: 16rem;
 }
 
 .resource-box:nth-child(odd) {
-    width: 14rem;
+    width: 19rem;
 }
 
-/* for å endre størelsen på container*/
-.html-box {
-    width: 235px; 
-}
- 
 
-.sanity-box {
-    width: 421px; 
-}
 
-/* Når man trykker på rususs boksen*/
 .resource-box.active {
     background-color: #fff;
     color: #2A324B;
@@ -68,9 +61,8 @@ body {
 .resource-info {
     background-color: #fff;
     color: #2A324B;
-    padding: 90px;
+    padding: 89px;
     margin: -7.5px;
     max-width: 100%;
-    height: 19rem;
-   
+    height: 15rem;
 }
