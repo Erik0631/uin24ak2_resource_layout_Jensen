@@ -7,12 +7,12 @@ resources.forEach((resource, index) => createResourceBox(resource, index))
 
 //Funksjon for å opprette en ressursboks//
 function createResourceBox(resource, index) {
-  const resourceBox = document.createElement("div")
+  const resourceBox = document.createElement("div") 
   resourceBox.className = "resource-box"
   //Henter category//
   resourceBox.innerHTML = `<h2>${resource.category}</h2>`
   
-  //Tilpasse bredden basert på kategorien//
+  //Tilpasser bredden på ressursboksen basert på kategorien//
   if (resource.category === "HTML") {
     resourceBox.classList.add("html-box") 
   } else if (resource.category === "Sanity and headless CMS") {
@@ -58,3 +58,5 @@ function showResourceInfo(index, clickedBox) {
 
 }
 
+//https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement//
+//https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/click
