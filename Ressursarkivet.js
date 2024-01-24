@@ -1,27 +1,25 @@
 
-
 const resourcesContainer = document.getElementById("resources-container")
 const infoContainer = document.getElementById("info-container")
 
-
 //Opprett ressursbokser for hver ressurs//
 resources.forEach((resource, index) => createResourceBox(resource, index))
-
 
 //Funksjon for å opprette en ressursboks//
 function createResourceBox(resource, index) {
   const resourceBox = document.createElement("div")
   resourceBox.className = "resource-box"
-  //henter category//
+  //Henter category//
   resourceBox.innerHTML = `<h2>${resource.category}</h2>`
   
   //Tilpasse bredden basert på kategorien//
   if (resource.category === "HTML") {
-    resourceBox.classList.add("html-box") //HTML-boksen//
+    resourceBox.classList.add("html-box") 
   } else if (resource.category === "Sanity and headless CMS") {
-    resourceBox.classList.add("sanity-box") //Sanity and headless CMS-boksen//
+    resourceBox.classList.add("sanity-box")
   }
 
+  //Legger til ressursboksen i resourcesContainer//
   resourcesContainer.appendChild(resourceBox)
 
   //klikk for å vise informasjon//
@@ -38,10 +36,10 @@ function showResourceInfo(index, clickedBox) {
   
   const selectedResource = resources[index]
 
-  //henter info siden// 
+  
+  //Henter koden fra ressurser.js og setter opp struktur for nettsiden//
   const infoBox = document.createElement("div")
   infoBox.className = "resource-info"
-  //Henter koden fra ressurser.js og setter opp struktur//
   infoBox.innerHTML = `
     <h2>${selectedResource.category}</h2>
     <div class="info-content">
@@ -52,7 +50,7 @@ function showResourceInfo(index, clickedBox) {
     </div>
   `
 
- //fjerner forgje boks//
+ //fjerner forgje boks så det ikke dobler seg //
   infoContainer.innerHTML = ''
 
   //legger til den valgte boksen//
