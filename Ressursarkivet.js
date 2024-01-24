@@ -53,8 +53,9 @@ function showResourceInfo(index, clickedBox) {
 
   //legger til den valgte boksen//
   infoContainer.appendChild(infoBox)  
-
+ 
+  
 }
-
 //https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement//
 //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/click
+ 
