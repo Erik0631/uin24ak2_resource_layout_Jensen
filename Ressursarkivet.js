@@ -29,7 +29,7 @@ function createResourceBox(resource, index) {
 
 //Funksjon for å vise informasjonen//
 function showResourceInfo(index, clickedBox) {
-  //Nullstiller aktiv boksen i resources-container//
+  //Nullstiller aktiv boksen i resources-container så den tar tilbake orginalfarge//
   document.querySelectorAll('.resource-box').forEach(box => box.classList.remove('active'))
 
   //Aktiv boks//
@@ -49,10 +49,10 @@ function showResourceInfo(index, clickedBox) {
         </ul>
     </div>
   `
- //fjerner forgje boks så det ikke dobler seg//
+ //Fjerner forgje boks så det ikke dobler seg//
   infoContainer.innerHTML = ''
 
-  //legger til den valgte boksen//
+  //Henter til den valgte boksen//
   infoContainer.appendChild(infoBox)  
  
   
