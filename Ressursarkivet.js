@@ -1,5 +1,6 @@
-
+//Henter HTML-elementet "resources-container//
 const resourcesContainer = document.getElementById("resources-container")
+//Henter HTML-elementet "info-container"//
 const infoContainer = document.getElementById("info-container")
 
 //Opprett ressursbokser for hver ressurs//
@@ -48,7 +49,7 @@ function showResourceInfo(index, clickedBox) {
         </ul>
     </div>
   `
- //fjerner forgje boks så det ikke dobler seg //
+ //fjerner forgje boks så det ikke dobler seg//
   infoContainer.innerHTML = ''
 
   //legger til den valgte boksen//
