@@ -11,6 +11,9 @@ body {
     
 }
 
+.a {
+    color: #58699D;
+}
 #info-container {
     max-width: 100%;
     margin-left: -4px;
@@ -29,6 +32,7 @@ body {
     max-width: 100%;
     min-width: 85.3rem;
     overflow-x: auto;
+    min-width: auto;
     
 }
 

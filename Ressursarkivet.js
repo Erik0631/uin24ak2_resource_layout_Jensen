@@ -9,7 +9,7 @@ resources.forEach((resource, index) => createResourceBox(resource, index))
 function createResourceBox(resource, index) {
   const resourceBox = document.createElement("div") 
   resourceBox.className = "resource-box"
-  //Henter category//
+  //Henter category og setter den som h2 tag//
   resourceBox.innerHTML = `<h2>${resource.category}</h2>`
   
   //Tilpasser bredden på ressursboksen basert på kategorien//
@@ -28,7 +28,7 @@ function createResourceBox(resource, index) {
 
 //Funksjon for å vise informasjonen//
 function showResourceInfo(index, clickedBox) {
-  //Nullstiller aktiv boksen//
+  //Nullstiller aktiv boksen i resources-container//
   document.querySelectorAll('.resource-box').forEach(box => box.classList.remove('active'))
 
   //Aktiv boks//
